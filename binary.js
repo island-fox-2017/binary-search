@@ -45,6 +45,18 @@ console.log(binary_search(53, arrayGanjilSorted))
 console.log(binary_search(3, arrayGanjilSorted))
 console.log(binary_search(2, arrayGanjilSorted))
 
+// Test Case - release 0
+let test_array = [];
+test_array = [1, 2, 3, 4, 5];
+console.log(binary_search(3, test_array) === 2);
+
+test_array = [13, 19, 24, 29, 32, 37, 43];
+console.log(binary_search(35, test_array) === -1);
+
+test_array = [100, 120, 130, 135, 150, 170];
+console.log(binary_search(135, test_array) === 3);
+//
+
 module.exports = {
   binary_search
 }
