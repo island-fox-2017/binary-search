@@ -24,14 +24,14 @@ function binarySearch (search, array) {
   let nilaiawal = 0;
   let nilaiakhir = array.length;
     while(nilaiawal <= nilaiakhir){                  // while akan berhenti ketika search == array[nilaitengah] return nilaitengah
-    let nilaitengah = Math.floor((nilaiawal+nilaiakhir)/2);
-      if(search > array[nilaitengah]){
-        nilaiawal = nilaitengah + 1
-      }else if (search < array[nilaitengah]){
-        nilaiakhir = nilaitengah - 1
-      }else{
-        return nilaitengah
-      }
+      let nilaitengah = Math.floor((nilaiawal+nilaiakhir)/2);
+        if(search > array[nilaitengah]){
+          nilaiawal = nilaitengah + 1
+        }else if (search < array[nilaitengah]){
+          nilaiakhir = nilaitengah - 1
+        }else{
+          return nilaitengah
+        }
     }return - 1;
 }
 
