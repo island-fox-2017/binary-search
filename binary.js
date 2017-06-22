@@ -30,9 +30,10 @@ function binarySearch (search, array) {
         }else if (search < array[nilaitengah]){
           nilaiakhir = nilaitengah - 1
         }else{
-          return nilaitengah
+           return nilaitengah;
         }
-    }return - 1;
+    }
+    return - 1;
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap)
@@ -41,13 +42,13 @@ var arrayGanjilSorted = ownSort(testArrayGanjil)
 console.log(arrayGenapSorted)
 console.log(arrayGanjilSorted)
 // Driver code
-console.log(binarySearch(32, arrayGenapSorted))
-console.log(binarySearch(10, arrayGenapSorted))
-console.log(binarySearch(33, arrayGenapSorted))
-
-console.log(binarySearch(53, arrayGanjilSorted))
-console.log(binarySearch(3, arrayGanjilSorted))
-console.log(binarySearch(2, arrayGanjilSorted))
+ console.log(binarySearch(18, arrayGenapSorted))
+// console.log(binarySearch(10, arrayGenapSorted))
+// console.log(binarySearch(33, arrayGenapSorted))
+//
+// console.log(binarySearch(53, arrayGanjilSorted))
+// console.log(binarySearch(3, arrayGanjilSorted))
+// console.log(binarySearch(2, arrayGanjilSorted))
 //
 // module.exports = {
 //   binary_search
