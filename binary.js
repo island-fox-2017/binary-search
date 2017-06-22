@@ -4,17 +4,46 @@ var testArrayGenap = [40, 18, 22, 32, 90, 10, 10, 22, 8]
 var testArrayGanjil = [3, 31, 89, 53, 53, 85, 77, 21, 55]
 
 function ownSort(arr) {
-  // Your sorting code
-  return arr
+  var temp = 0;
+  for(let i=1; i<arr.length; i++){
+    for(let j=0; j<i; j++){
+      if(arr[j]>arr[i]){
+        temp = arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+      }
+    }
+  }
+  return arr;
 }
 
-function binarySearch (search, array) {
-  // Your searching code
-  return 0;
+function binary_search (search, array) {
+  var nilaiAwal=0;
+  var nilaiAkhir=array.length-1;
+  var nilaiTengah= Math.floor((nilaiAwal+nilaiAkhir)/2)
+
+  while(nilaiAwal <= nilaiAkhir){
+    nilaiTengah= Math.floor((nilaiAwal+nilaiAkhir)/2)
+
+    if(array[nilaiTengah] > search){
+      nilaiAkhir = nilaiTengah-1
+    }
+    if(array[nilaiTengah] < search){
+      nilaiAwal = nilaiTengah+1
+    }
+    if(array[nilaiTengah] == search){
+      return nilaiTengah;
+    }
+
+  }
+  return -1
+
+
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap)
 var arrayGanjilSorted = ownSort(testArrayGanjil)
+
 
 // Driver code
 console.log(binary_search(8, arrayGenapSorted))
