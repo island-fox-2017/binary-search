@@ -8,9 +8,10 @@ function ownSort(arr) { //cara selection sort
   let arrSorted = [];
   let minVal;
   while (arr.length > 0) {
+    debugger
     minVal = Math.min(...arr);
     arrSorted.push(minVal);
-    arr.splice(arr.indexOf(Math.min(...arr)), 1);
+    arr.splice(arr.indexOf(minVal), 1);
     // console.log(arrSorted);
   }
   return arrSorted;
@@ -21,9 +22,8 @@ function binary_search (search, array) {
   // Your searching code
   var start = 0;
   var end = array.length-1;
-  var mid = Math.floor((start+end)/ 2);
   while (start <= end) {
-    mid = Math.floor((start+end)/ 2);
+    var mid = Math.floor((start+end)/ 2);
     if (search < array[mid]) {
       end = mid - 1;
     }
